@@ -114,14 +114,33 @@
 // export default App;
 
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import Bananas from './Bananas';
+
+const styles = StyleSheet.create({
+  red: {
+    color: 'red',
+    fontWeight: 'bold',
+    justifyContent: "center", 
+    alignItems: "center",
+    fontSize: 30,
+  },
+
+  bigBlue: {
+    color: 'blue',
+    fontSize: 15,
+    justifyContent: "center", 
+    alignItems: "center" 
+  },
+  
+});
 
 export default class HelloWorldApp extends Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello, world!</Text>
+      <View>
+        <Text style={styles.red}>Hello everyone!</Text>
+        <Text style={[styles.bigBlue]}>I like bananas a lot!</Text>
         <Bananas />
       </View>
     );
